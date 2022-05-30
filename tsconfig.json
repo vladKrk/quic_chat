@@ -1,0 +1,15 @@
+{
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "./*.ts"],
+    "compilerOptions": {
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "paths": {
+            "#/*": ["./*"],
+            "~/*": ["./src/*"]
+        },
+        "skipLibCheck": true,
+        "target": "esnext",
+        "module": "commonjs"
+    }
+}

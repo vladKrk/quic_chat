@@ -1,0 +1,53 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "settings": {
+      "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"]
+      },
+      "import/resolver": {
+        "node": {
+          "paths": ["src"],
+          "extensions": [".js", ".jsx", ".ts", ".tsx"],
+          "typescript": {}
+        }
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "globals": {
+      "WebTransport": true,
+      "TextDecoderStream": true
+    },
+    "rules": {
+      "no-unused-vars": "off",
+      "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+     ],
+     "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+    }
+  }
